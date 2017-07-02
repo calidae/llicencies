@@ -1,14 +1,17 @@
 import React from 'react';
 
 export default function Checkbox(props) {
+
+    const { isChecked, onChange, label } = props
+
     return (
       <label>
         <input
           type="checkbox"
-          checked={props.isChecked}
-          onChange={props.onChange}
+          checked={isChecked}
+          onChange={onChange}
         />
-        {props.label}
+        {label}
       </label>
     );
 }

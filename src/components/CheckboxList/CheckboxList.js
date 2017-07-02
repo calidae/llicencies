@@ -17,12 +17,15 @@ export default class CheckboxList extends Component {
       <div>
         {
           this.props.options && this.props.options.map(option => {
+
+            const { label, value } = option
+
             return <Checkbox
-              label={option.label}
-              isChecked={this.state.value === option.value}
-              value={option.value}
-              key={option.value}
-              onChange={() => this.handleChange(option.value)}
+              label={label}
+              isChecked={this.state.value === value}
+              value={value}
+              key={value}
+              onChange={() => this.handleChange(value)}
             />
           })
         }
