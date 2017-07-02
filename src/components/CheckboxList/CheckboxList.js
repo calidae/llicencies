@@ -19,7 +19,7 @@ export default class CheckboxList extends Component {
           this.props.options && this.props.options.map(option => {
             return <Checkbox
               label={option.label}
-              checked={this.state.value === option.value}
+              isChecked={this.state.value === option.value}
               value={option.value}
               key={option.value}
               onChange={() => this.handleChange(option.value)}
