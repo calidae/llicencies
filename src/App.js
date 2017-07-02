@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
+import Question from './components/Question'
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div className="App">
@@ -10,12 +11,15 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <Question 
+            number="1"
+            title="¿Se puede compartir mi software?"
+            options={[
+              { label: 'label1', value: 'value1' },
+              { label: 'label2', value: 'value2' },
+            ]}
+          />
       </div>
     );
   }
 }
-
-export default App;
