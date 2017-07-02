@@ -17,7 +17,7 @@ it('renders an input', () => {
   const checkbox = shallow(<Checkbox label="test" { ...props } />)
   const content = (
     <label>
-      <input type="checkbox" value={props.value} checked={props.isChecked} onChange={props.onChange} />
+      <input type="checkbox" checked={props.isChecked} onChange={props.onChange} />
       test
     </label>
   )
