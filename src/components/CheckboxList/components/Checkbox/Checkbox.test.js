@@ -9,11 +9,15 @@ it('renders without crashing', () => {
 });
 
 it('renders an input', () => {
-  const onChange = jest.fn()
-  const checkbox = shallow(<Checkbox label="test" isChecked={false} onChange={onChange} />)
+  const props = {
+    isChecked: false,
+    onChange: () => {}
+  }
+
+  const checkbox = shallow(<Checkbox label="test" { ...props } />)
   const content = (
     <label>
-      <input type="checkbox" checked={false} onChange={onChange} />
+      <input type="checkbox" value={props.value} checked={props.isChecked} onChange={props.onChange} />
       test
     </label>
   )
